@@ -12,11 +12,9 @@ jobs:
       - run: yes | sdkmanager --licenses || true
       - uses: gradle/actions/setup-gradle@v4
         with:
-          gradle-version: "8.7"
-      - run: unzip -q GTVLauncher.zip
+          gradle-version: "7.6.1"
       - run: gradle assembleDebug
-        working-directory: GTVLauncher
       - uses: actions/upload-artifact@v4
         with:
-          name: GTVLauncher-apk
-          path: GTVLauncher/app/build/outputs/apk/debug/*.apk
+          name: NOVA-TV-Future-apk
+          path: app/build/outputs/apk/debug/*.apk
